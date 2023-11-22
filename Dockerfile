@@ -23,7 +23,7 @@ FROM openjdk:17-jdk-slim
 EXPOSE 8080
 
 # Copia o arquivo JAR compilado do estágio de construção para o diretório raiz do contêiner
-COPY --from=build /target/backend_integracao-1.0.0.jar app.jar
+COPY --from=build /target/backend_integracao-0.0.1.jar app.jar
 
 # Define o ponto de entrada para a aplicação, executando o comando 'java -jar app.jar'
 ENTRYPOINT [ "java", "-jar", "app.jar" ]
